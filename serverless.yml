@@ -1,0 +1,14 @@
+service: stoic-quote-api
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: v1
+  region: ap-southeast-1
+
+functions:
+  app:
+    handler: server.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'

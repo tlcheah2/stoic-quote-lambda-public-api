@@ -1,0 +1,20 @@
+{
+  "name": "stoic-quote-lambda-public-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.10",
+    "serverless-http": "^2.7.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
