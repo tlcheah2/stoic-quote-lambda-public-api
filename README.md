@@ -6,9 +6,6 @@ This API generates stoicism quotes to help you live a better life using Stoicism
 ## Overview
 At this moment, this GET API returns data in the body as a JSON with the `author` and `quote`.
 
-## Caching
-The API uses a cache, which expires every hour so quotes do not get updated in this period.
-
 ## Usage
 GET https://api.themotivate365.com/stoic-quote
 
