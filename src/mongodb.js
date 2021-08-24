@@ -12,22 +12,20 @@ const connectDB = async () => {
     mongoClient = await MongoClient.connect(process.env.MONGODB_URI,
       { useNewUrlParser: true, useUnifiedTopology: true });
     db = mongoClient.db('quote');
-    console.log('db', db.collection('quotes'));
     console.log('Connected to DB successfully');
   }
   return mongoClient;
 };
 
-const getClient = () => mongoClient;
-
-const getQuoteCollection = () => {
+const getQuoteCollection = async () => {
+  if (!mongoClient) {
+    await connectDB();
+  }
   if (db) return db.collection('quotes');
   throw new Error('No Quote Collection found');
-}
-
+};
 
 module.exports = {
   connectDB,
   getQuoteCollection,
-  getClient,
 };

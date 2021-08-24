@@ -2,10 +2,7 @@ const { getQuoteCollection, getClient, connectDB } = require('../mongodb');
 
 exports.getRandomSingleQuote = async (condition = {},) => {
   try {
-    if (!getClient() || !getClient().isConnected()) {
-      await connectDB();
-    }
-    return getQuoteCollection().aggregate([
+    return await getQuoteCollection().aggregate([
       {
         $match: condition,
       },

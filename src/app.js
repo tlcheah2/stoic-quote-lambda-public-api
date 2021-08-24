@@ -1,8 +1,8 @@
 const express = require('express');
-const app = express();
 const quoteService = require('./services/quoteService');
 const { connectDB } = require('./mongodb');
 
+const app = express();
 // Init connection to MongoDB
 connectDB();
 
