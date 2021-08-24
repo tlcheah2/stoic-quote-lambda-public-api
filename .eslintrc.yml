@@ -1,0 +1,10 @@
+extends: airbnb-base
+rules:
+  # some times next variable is required on express even if it's not used just to specify certain handler functions. So we have to allow it
+  no-unused-vars:
+    [error, { argsIgnorePattern: next }]
+  no-underscore-dangle:
+    [error, { allow: ["_id"] }]
+  # keep airbnb's 100 char's per code line but ignore the rule for comments
+  max-len:
+    [error, { code: 150, ignoreComments: true, ignoreStrings: true, ignoreTemplateLiterals: true }]
