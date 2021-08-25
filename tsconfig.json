@@ -5,18 +5,18 @@
     "moduleResolution": "node",
     "allowJs": true,
     "checkJs": true,
-    "outDir": "dist",
+    "outDir": "dist", // Compiled Output Directory
     "rootDir": "",
     "esModuleInterop": true
   },
   "include": [
-    "src/**/*.js",
-    "src/**/*.ts",
+    "src/**/*.js", // Every js file inside src folder
+    "src/**/*.ts", // Every ts file inside src folder
     "server.js"
   ],
   "exclude": [
     "node_modules",
-    ".serverless",
-    "dist"
+    ".serverless", // Exclude serverless directory
+    "dist" // Exclude compiled output by Typescript compiler
   ]
 }
