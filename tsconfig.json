@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2018",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "dist",
+    "rootDir": "",
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*.js",
+    "src/**/*.ts",
+    "server.js"
+  ],
+  "exclude": [
+    "node_modules",
+    ".serverless",
+    "dist"
+  ]
+}
