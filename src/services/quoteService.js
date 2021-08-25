@@ -1,6 +1,6 @@
-const { getQuoteCollection, getClient, connectDB } = require('../mongodb');
+const { getQuoteCollection } = require('../mongodb');
 
-exports.getRandomSingleQuote = async (condition = {},) => {
+exports.getRandomSingleQuote = async (condition = {}) => {
   try {
     return await getQuoteCollection().aggregate([
       {
@@ -14,8 +14,8 @@ exports.getRandomSingleQuote = async (condition = {},) => {
         },
       },
       {
-        $sample: { size: 1 }
-      }
+        $sample: { size: 1 },
+      },
     ]).toArray();
   } catch (err) {
     console.log('getRandomSingleQuote error', err);
