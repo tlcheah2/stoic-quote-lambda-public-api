@@ -2,7 +2,8 @@ const { getQuoteCollection } = require('../mongodb');
 
 exports.getRandomSingleQuote = async (condition = {}) => {
   try {
-    return await getQuoteCollection().aggregate([
+    const quotes = await getQuoteCollection();
+    return quotes.aggregate([
       {
         $match: condition,
       },
