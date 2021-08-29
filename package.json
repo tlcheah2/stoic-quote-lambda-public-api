@@ -12,7 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongodb": "^3.6.10",
-    "serverless-http": "^2.7.0"
+    "serverless-http": "^2.7.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "@types/node": "^16.7.1",

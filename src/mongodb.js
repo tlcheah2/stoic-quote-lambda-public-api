@@ -1,5 +1,6 @@
 // Import the dependency.
 const { MongoClient } = require('mongodb');
+const logger = require('./logger').default;
 
 let mongoClient;
 let db;
@@ -12,7 +13,7 @@ const connectDB = async () => {
     mongoClient = await MongoClient.connect(process.env.MONGODB_URI,
       { useNewUrlParser: true, useUnifiedTopology: true });
     db = mongoClient.db('quote');
-    console.log('Connected to DB successfully');
+    logger.info('Connected to DB successfully');
   }
   return mongoClient;
 };

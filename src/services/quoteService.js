@@ -1,4 +1,5 @@
 const { getQuoteCollection } = require('../mongodb');
+const logger = require('../logger').default;
 
 exports.getRandomSingleQuote = async (condition = {}) => {
   try {
@@ -19,7 +20,7 @@ exports.getRandomSingleQuote = async (condition = {}) => {
       },
     ]).toArray();
   } catch (err) {
-    console.log('getRandomSingleQuote error', err);
+    logger.error('getRandomSingleQuote error', err);
     return undefined;
   }
 };
