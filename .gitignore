@@ -1,3 +1,5 @@
 .serverless
 node_modules
 .env
+dist
+outputs

@@ -1,4 +1,8 @@
-extends: airbnb-base
+extends: 
+  - airbnb-base
+  - airbnb-typescript/base
+parserOptions: 
+  project: ./tsconfig.json
 rules:
   # some times next variable is required on express even if it's not used just to specify certain handler functions. So we have to allow it
   no-unused-vars:
