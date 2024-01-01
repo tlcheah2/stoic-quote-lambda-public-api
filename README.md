@@ -7,12 +7,12 @@ This API generates stoicism quotes to help you live a better life using Stoicism
 At this moment, this GET API returns data in the body as a JSON with the `author` and `quote`.
 
 ## Usage
-GET https://api.themotivate365.com/stoic-quote
+GET https://stoic.tekloon.net/stoic-quote
 
 The request takes no parameters, headers or query strings.
 
 ## Example
-`curl -X GET https://api.themotivate365.com/stoic-quote`
+`curl -X GET https://stoic.tekloon.net/stoic-quote`
 
 Generates:
 ```
